@@ -56,3 +56,25 @@ def intersection(list1, list2):
                 list.append(i)
                 break
     return list
+
+
+def palindrome(word):
+    y = []
+    for i in range(len(word)):
+        y.append(word[i])
+    if y == y[::-1]:
+        print('Palindrome')
+    else:
+        print('Not palindrome')
+    
+    
+def prime(n):
+    if n != 1:
+        for i in range(2, n):
+            if n % i == 0:
+                print("Not prime")
+                break
+            else:
+                print("Prime")
+    else:
+        print("Not prime")
