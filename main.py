@@ -78,3 +78,21 @@ def prime(n):
                 print("Prime")
     else:
         print("Not prime")
+         
+         
+def fibonacci(n):
+    if n in {0, 1}:
+        return n
+    return fibonnaci(n - 1) + fibonnaci(n - 2)
+# [fibonacci(n) for n in range(10)]
+
+
+def sort_even_and_odd(list):
+    even_list = []
+    odd_list = []
+    for i in list:
+        if str(i / 2.0)[-1:] == "0":
+            even_list.append(i)
+        elif str(i / 2.0)[-1:] == "5":
+            odd_list.append(i)
+
