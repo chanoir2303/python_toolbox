@@ -96,3 +96,14 @@ def sort_even_and_odd(list):
         elif str(i / 2.0)[-1:] == "5":
             odd_list.append(i)
 
+            
+def largest_prime_factor(n):
+    largest = None
+    for i in range(2, n):
+        while n % i == 0:
+            largest = i
+            n //= i
+        if n == 1:
+            return largest
+    if n > 1:
+        return n
