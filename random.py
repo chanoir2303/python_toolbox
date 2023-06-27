@@ -1,3 +1,13 @@
+import string
+import random
+
+def generate_password(nbr_chars):
+    printable_chars = string.ascii_letters + string.digits + string.punctuation
+
+    for i in range(nbr_chars):
+        print(random.choice(printable_chars), end='')
+
+
 def fizzbuzz(n):
     for i in range(0, n):
         if i % 3 == 0:
