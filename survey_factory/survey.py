@@ -14,6 +14,7 @@ class Survey:
         self.neutral_templates = sd.neutral_templates
         self.negative_templates = sd.negative_templates
 
+    # Initialize survey factory
     def _generate_survey(self, templates, sequences, label):
         template = random.choice(templates)
         sequence = random.choice(sequences)
@@ -30,6 +31,7 @@ class Survey:
 
         return survey
 
+    # Pass mood template, sequence & label to initialized survey factory
     def generate_positive_survey(self):
         return self._generate_survey(self.positive_templates, self.positive_sequences, "positive")
 
